@@ -36,13 +36,13 @@ Clone the repository to your local machine:
 
 Install the necessary dependencies:
 
-    ```bash
+    
     npm install
 
 ### Running the server
 Start the server with:
 
-    ```bash
+    
     node server.js
 
 The server will run on http://localhost:3000 by default.
@@ -50,7 +50,7 @@ The server will run on http://localhost:3000 by default.
 ### Usage
 To fetch weather data and estimate energy generation:
 
-    ```bash
+    
     GET /weather/:latitude/:longitude
 
 
@@ -61,7 +61,7 @@ To fetch weather data and estimate energy generation:
 
 ### Example Request
 
-    ```bash
+    
     curl http://localhost:3000/weather/34.05/-118.25
 
 ### Response
@@ -70,5 +70,5 @@ The response will include weather codes, maximum and minimum temperatures, and e
 ### Testing
 Tests are written using Mocha and Chai. To run the tests, use:
 
-    ```bash
+    
     npm test
