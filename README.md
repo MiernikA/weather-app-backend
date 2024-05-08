@@ -24,7 +24,7 @@ node --version
 
 # Check npm installation
 npm --version
-```bash
+
 
 ### Installing
 
@@ -33,20 +33,19 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/yourusername/weather-api.git
 cd weather-api
-```bash
+
 
 Install the necessary dependencies:
 
 ```bash
 npm install
-```bash
+
 
 ### Running the server
 Start the server with:
 
 ```bash
 node server.js
-```bash
 
 The server will run on http://localhost:3000 by default.
 
@@ -55,7 +54,7 @@ To fetch weather data and estimate energy generation:
 
 ```bash
 GET /weather/:latitude/:longitude
-```bash
+
 
 ### Parameters
 
