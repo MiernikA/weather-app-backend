@@ -7,12 +7,6 @@ const getWeatherData = async (req, res) => {
     try {
         const { latitude, longitude } = req.params;
 
-        if (!latitude || !longitude || isNaN(Number(latitude)) || isNaN(Number(longitude)))
-            return res.status(400).send('Invalid latitude or longitude. Both should be numbers.');
-
-        if (latitude < -90 || latitude > 90 || longitude < -180 || longitude > 180)
-            return res.status(400).send('Invalid latitude or longitude. Latitude must be between -90 and 90. Longitude must be between -180 and 180.');
-
         const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=weather_code,temperature_2m_max,temperature_2m_min,sunshine_duration`;
         const response = await axios.get(apiUrl);
 
