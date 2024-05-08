@@ -31,7 +31,7 @@ These instructions will get you a copy of the project up and running on your loc
 Clone the repository to your local machine:
 
     
-    git clone https://github.com/yourusername/weather-api.git
+    git clone https://github.com/miernika/weather-api.git
     cd weather-api
 
 Install the necessary dependencies:
