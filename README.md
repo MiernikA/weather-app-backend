@@ -18,42 +18,43 @@ These instructions will get you a copy of the project up and running on your loc
 - Node.js
 - npm
 
-```bash
-# Check Node.js installation
-node --version
-
-# Check npm installation
-npm --version
+  ```bash
+  # Check Node.js installation
+  node --version
+  
+  ```bash
+  # Check npm installation
+  npm --version
 
 
 ### Installing
 
 Clone the repository to your local machine:
 
-```bash
-git clone https://github.com/yourusername/weather-api.git
-cd weather-api
+  ```bash
+  git clone https://github.com/yourusername/weather-api.git
+  cd weather-api
 
 
 Install the necessary dependencies:
 
-```bash
-npm install
+  ```bash
+  npm install
 
 
 ### Running the server
 Start the server with:
 
-```bash
-node server.js
+  ```bash
+  node server.js
 
 The server will run on http://localhost:3000 by default.
 
 ### Usage
 To fetch weather data and estimate energy generation:
 
-```bash
-GET /weather/:latitude/:longitude
+  ```bash
+  GET /weather/:latitude/:longitude
 
 
 ### Parameters
@@ -63,6 +64,8 @@ GET /weather/:latitude/:longitude
 
 ### Example Request
 
-```bash
-curl http://localhost:3000/weather/34.05/-118.25
-```bash
+  ```bash
+  curl http://localhost:3000/weather/34.05/-118.25
+
+### Response
+The response will include weather codes, maximum and minimum temperatures, and estimated energy generated based on the sunshine duration.
