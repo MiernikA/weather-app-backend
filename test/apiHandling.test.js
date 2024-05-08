@@ -8,8 +8,6 @@ describe('ApiEndpointTest', function () {
 
     describe("Handling incorrect data", function () {
 
-
-
         it('should return error for latitude greater than 90', function (done) {
             chai.request(deployed_url)
                 .get('/weather/91/50')
