@@ -1,6 +1,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const expect = chai.expect;
+const deployed_url = 'https://weather-endpoint.vercel.app/'
 chai.use(chaiHttp);
 
 describe('ApiEndpointTest', function () {
@@ -10,7 +11,7 @@ describe('ApiEndpointTest', function () {
 
 
         it('should return error for latitude greater than 90', function (done) {
-            chai.request('http://localhost:3000')
+            chai.request(deployed_url)
                 .get('/weather/91/50')
                 .end(function (err, res) {
                     expect(res).to.have.status(400);
@@ -20,7 +21,7 @@ describe('ApiEndpointTest', function () {
         });
 
         it('should return error for longitude less than -180', function (done) {
-            chai.request('http://localhost:3000')
+            chai.request(deployed_url)
                 .get('/weather/50/-181')
                 .end(function (err, res) {
                     expect(res).to.have.status(400);
@@ -30,7 +31,7 @@ describe('ApiEndpointTest', function () {
         });
 
         it('should handle not valida data type', function (done) {
-            chai.request('http://localhost:3000')
+            chai.request(deployed_url)
                 .get('/weather/abc/22')
                 .end(function (err, res) {
                     expect(res).to.have.status(400);
@@ -40,7 +41,7 @@ describe('ApiEndpointTest', function () {
         });
 
         it('should handle missing latitude parameter', function (done) {
-            chai.request('http://localhost:3000')
+            chai.request(deployed_url)
                 .get('/weather//50')
                 .end(function (err, res) {
                     expect(res).to.have.status(404);
@@ -51,7 +52,7 @@ describe('ApiEndpointTest', function () {
 
     describe("Handling valid data", function () {
         it('should return correct data for valid latitude and longitude', function (done) {
-            chai.request('http://localhost:3000')
+            chai.request(deployed_url)
                 .get('/weather/40/-74')
                 .end(function (err, res) {
                     expect(res).to.have.status(200);
